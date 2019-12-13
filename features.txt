@@ -1,0 +1,46 @@
+Features I might care about
+
+
+text stuff that I need to do:
+- basic processing - stopword removal, URL/username removal, possibly stemming
+- some kinda topic model type of thing
+- tf-idf dtm?
+- sentiment analysis on tweet text
+- 
+
+
+from tweet dataframe: 
+- length of text
+- source?
+- reply and rt y/n
+- reply and rt source/target
+- fav, rt, quote counts
+- hashtags - treat as same kind of text as text of tweet, or differently in some way?
+- IDs/usernames mentioned
+- lang (but it's almost always english)
+- geo coords are basically always missing - but maybe useful if they appear in other data more often
+- some other geo data is occasionally present
+- user level stuff from this df:
+  - name. do text stuff to it? Or treat as factor? A LOT of levels - probably not useful as factor, unlikely as text but who knows!
+  - description - *text stuff* might actually work
+  - counts of followers, friends, listed, tweets,
+  - account age
+  - verified
+
+- THE RATIO or whatever the hell it's called
+
+
+user-level stuff to pull:
+- followed
+- followers
+
+
+What kind of cool network shit could I do?
+- second-order follow counts? (i.e. avg # of followers of the accounts someone follows)
+- some kind of measure of network density - do the people that a user follows tend to follow each other? 
+- Does an account and its friends/followed accounts all follow the same large-follower-count accounts?
+
+Some kind of two-stage type of deal
+- If a user has some number of high-confidence tweets of a certain type, tweak other predictions for that user in the direction of the high-confidence ones
+  - Maybe do this for all tweets after the first high-conf one?
+- 
